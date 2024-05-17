@@ -3,6 +3,7 @@ export const siteConfig = {
   description: "Chonza is a UI Library built with React and TailwindCSS.",
   links: {
     github: "https://github.com/trinhdinhtai/tafiui",
+    twitter: "https://twitter.com/trinhdinhtai_",
   },
   docs: [
     {
