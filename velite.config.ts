@@ -1,3 +1,6 @@
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
+import rehypePrettyCode from "rehype-pretty-code"
+import rehypeSlug from "rehype-slug"
 import { defineCollection, defineConfig, s } from "velite"
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
@@ -30,4 +33,19 @@ export default defineConfig({
     clean: true,
   },
   collections: { docs },
+  mdx: {
+    rehypePlugins: [
+      rehypeSlug as any,
+      [rehypePrettyCode, { theme: "github-dark" }],
+      [
+        rehypeAutolinkHeadings,
+        {
+          properties: {
+            className: ["subheading-anchor"],
+            ariaLabel: "Link to section",
+          },
+        },
+      ],
+    ],
+  },
 })
