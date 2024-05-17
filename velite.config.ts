@@ -56,6 +56,7 @@ export default defineConfig({
         {
           theme: {
             dark: "github-dark-dimmed",
+            light: "github-light",
           },
           keepBackground: false,
         },

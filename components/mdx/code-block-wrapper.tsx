@@ -19,7 +19,7 @@ export default function CodeBlockWrapper({
       <figure
         data-rehype-pretty-code-figure
         className={cn(
-          "relative mb-4 mt-6 overflow-hidden rounded-lg border bg-card",
+          "relative mb-4 mt-6 overflow-hidden rounded-lg border bg-background",
           open ? "h-auto" : "h-[400px]"
         )}
       >
@@ -27,7 +27,7 @@ export default function CodeBlockWrapper({
 
         <div
           className={cn(
-            "absolute inset-0 z-0 flex items-center justify-center bg-gradient-to-t from-[#0D0D0C] to-transparent",
+            "absolute inset-0 z-0 flex items-center justify-center bg-gradient-to-b from-transparent to-white dark:to-[#0D0D0C]",
             open ? "hidden" : "block"
           )}
         />
