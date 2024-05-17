@@ -82,6 +82,15 @@ const components = {
   pre: ({ className, ...props }: HTMLAttributes<HTMLPreElement>) => (
     <pre className={cn("overflow-x-auto py-4", className)} {...props} />
   ),
+  code: ({ className, ...props }: HTMLAttributes<HTMLElement>) => (
+    <code
+      className={cn(
+        "relative rounded border bg-muted px-[0.3rem] py-0.5 font-mono text-[0.95em]",
+        className
+      )}
+      {...props}
+    />
+  ),
 }
 
 interface MDXProps {

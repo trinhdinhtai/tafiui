@@ -15,7 +15,7 @@ html.dark code[data-theme*=" "] span {
 }
 
 [data-rehype-pretty-code-figure] code {
-  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0;
+  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm;
   counter-reset: line;
   box-decoration-break: clone;
 }

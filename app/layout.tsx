@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter as FontSans } from "next/font/google"
+import { Roboto_Mono as FontMono, Inter as FontSans } from "next/font/google"
 
 import "@/styles/globals.css"
 
@@ -11,6 +11,11 @@ import { ThemeProvider } from "@/components/theme-provider"
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const fontCode = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 })
 
 export const metadata: Metadata = {
@@ -28,7 +33,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-dvh bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontCode.variable
         )}
       >
         <ThemeProvider
