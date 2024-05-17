@@ -3,6 +3,7 @@ import * as runtime from "react/jsx-runtime"
 
 import { cn } from "@/lib/utils"
 import CodeBlockWrapper from "@/components/mdx/code-block-wrapper"
+import ComponentPreview from "@/components/mdx/component-preview"
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code)
@@ -91,6 +92,7 @@ const components = {
       {...props}
     />
   ),
+  ComponentPreview,
 }
 
 interface MDXProps {
