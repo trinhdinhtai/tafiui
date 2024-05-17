@@ -1,18 +1,18 @@
 import { notFound } from "next/navigation"
-import { docs as allDocs } from "#site/content"
+import { components as allComponents } from "#site/content"
 
 import { MDXContent } from "@/components/mdx"
 
-interface DocsPageProps {
+interface ComponentsProps {
   params: {
     slug: string[]
   }
 }
 
-async function getDocFromParams(params: DocsPageProps["params"]) {
+async function getComponentFromParams(params: ComponentsProps["params"]) {
   const slug = params.slug?.join("/") || ""
 
-  const doc = allDocs.find((doc) => {
+  const doc = allComponents.find((doc) => {
     return doc.slugAsParams === slug
   })
 
@@ -21,8 +21,8 @@ async function getDocFromParams(params: DocsPageProps["params"]) {
   return doc
 }
 
-export default async function DocsPage({ params }: DocsPageProps) {
-  const doc = await getDocFromParams(params)
+export default async function ComponentsPage({ params }: ComponentsProps) {
+  const doc = await getComponentFromParams(params)
 
   if (!doc?.published) return notFound()
 

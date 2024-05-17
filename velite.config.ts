@@ -23,6 +23,21 @@ const docs = defineCollection({
     .transform(computedFields),
 })
 
+const components = defineCollection({
+  name: "Component",
+  pattern: "components/**/*.mdx",
+  schema: s
+    .object({
+      slug: s.path(),
+      title: s.string().max(99),
+      description: s.string().max(999).optional(),
+      published: s.boolean().default(true),
+      toc: s.toc(),
+      body: s.mdx(),
+    })
+    .transform(computedFields),
+})
+
 export default defineConfig({
   root: "content",
   output: {
@@ -32,7 +47,7 @@ export default defineConfig({
     name: "[name]-[hash:6].[ext]",
     clean: true,
   },
-  collections: { docs },
+  collections: { docs, components },
   mdx: {
     rehypePlugins: [
       rehypeSlug as any,
