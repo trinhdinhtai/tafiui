@@ -13,7 +13,7 @@ export const siteConfig = {
     },
     {
       title: "Installation",
-      path: "/docs/creating-a-new-project",
+      path: "/docs/installation",
       new: false,
     },
     {
