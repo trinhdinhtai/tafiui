@@ -1,5 +1,6 @@
 import MainNav from "@/components/layout/main-nav"
 import MobileNav from "@/components/layout/mobile-nav"
+import NavOptions from "@/components/layout/nav-options"
 
 export default function Header() {
   return (
@@ -7,6 +8,7 @@ export default function Header() {
       <div className="flex h-12 items-center justify-center md:container max-md:px-4">
         <MobileNav />
         <MainNav />
+        <NavOptions />
       </div>
     </header>
   )

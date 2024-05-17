@@ -1,5 +1,8 @@
 export const siteConfig = {
   name: "TafiUI",
+  links: {
+    github: "https://github.com/trinhdinhtai/tafiui",
+  },
   docs: [
     {
       title: "Introduction",
