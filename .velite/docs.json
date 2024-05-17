@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "docs/introduction",
+    "title": "Introduction",
+    "description": "Introduction to the entire library.",
+    "published": true,
+    "toc": [
+      {
+        "title": "¿What is Chonza?",
+        "url": "#what-is-chonza",
+        "items": [
+          {
+            "title": "Introduction",
+            "url": "#introduction",
+            "items": []
+          },
+          {
+            "title": "Features",
+            "url": "#features",
+            "items": []
+          },
+          {
+            "title": "Installation",
+            "url": "#installation",
+            "items": []
+          },
+          {
+            "title": "Credits",
+            "url": "#credits",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "body": "const{Fragment:n,jsx:e,jsxs:t}=arguments[0];function _createMdxContent(o){const i={h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...o.components};return t(n,{children:[e(i.h1,{children:\"¿What is Chonza?\"}),\"\\n\",e(i.h2,{children:\"Introduction\"}),\"\\n\",t(i.p,{children:[\"Chonza is a collection of components and styles that can be used to build web applications. It is designed to be simple and easy to integrate into your \",e(i.strong,{children:\"ReactJS\"}),\" and \",e(i.strong,{children:\"NextJS\"}),\" projects.\"]}),\"\\n\",e(i.h2,{children:\"Features\"}),\"\\n\",t(i.ul,{children:[\"\\n\",t(i.li,{children:[\"\\n\",t(i.p,{children:[e(i.strong,{children:\"Simple\"}),\": Chonza is designed to be simple and easy to use. It is built on top of TailwindCSS and Framer Motion, which makes it easy to integrate into your projects.\"]}),\"\\n\"]}),\"\\n\",t(i.li,{children:[\"\\n\",t(i.p,{children:[e(i.strong,{children:\"Customizable\"}),\": Chonza is highly customizable. You can easily change the colors, fonts, and other styles to match your brand.\"]}),\"\\n\"]}),\"\\n\",t(i.li,{children:[\"\\n\",t(i.p,{children:[e(i.strong,{children:\"Responsive\"}),\": Chonza is designed to be responsive. It works on all devices, from mobile to desktop.\"]}),\"\\n\"]}),\"\\n\",t(i.li,{children:[\"\\n\",t(i.p,{children:[e(i.strong,{children:\"Open Source\"}),\": Chonza is open source. You can use it for free in your personal and commercial projects and contribute to its development.\"]}),\"\\n\"]}),\"\\n\"]}),\"\\n\",e(i.h2,{children:\"Installation\"}),\"\\n\",e(i.p,{children:\"You only need to install the dependencies and import the components that you want to use in your project.\"}),\"\\n\",e(i.p,{children:\"Dependencies:\"}),\"\\n\",t(i.ul,{children:[\"\\n\",t(i.li,{children:[\"\\n\",t(i.p,{children:[e(i.strong,{children:\"ReactJS\"}),\": Chonza is built on top of ReactJS, so your project needs to have ReactJS installed, for example you can use it with NextJS, Astro or Create React App.\"]}),\"\\n\"]}),\"\\n\",t(i.li,{children:[\"\\n\",t(i.p,{children:[e(i.strong,{children:\"TailwindCSS\"}),\": Chonza uses TailwindCSS for styling, so you need to have TailwindCSS installed in your project.\"]}),\"\\n\"]}),\"\\n\"]}),\"\\n\",e(i.h2,{children:\"Credits\"}),\"\\n\",t(i.p,{children:[\"Chonza is inspired by other libraries like \",e(i.strong,{children:\"ShadCN\"}),\" and \",e(i.strong,{children:\"MagicUI\"}),\" so I want to give them credit for their work and inspiration, also I want to thank the \",e(i.strong,{children:\"TailwindCSS\"}),\" team for their amazing work.\"]})]})}return{default:function(n={}){const{wrapper:t}=n.components||{};return t?e(t,{...n,children:e(_createMdxContent,{...n})}):_createMdxContent(n)}};",
+    "slugAsParams": "introduction"
+  }
+]
