@@ -28,19 +28,9 @@ export const siteConfig = {
       new: false,
     },
     {
-      title: "Testimonials",
-      path: "/components/testimonials",
+      title: "Number Ticker",
+      path: "/components/number-ticker",
       new: false,
-    },
-    {
-      title: "Logo Roll",
-      path: "/components/logo-roll",
-      new: true,
-    },
-    {
-      title: "Shine",
-      path: "/components/shine",
-      new: true,
     },
   ],
 }
