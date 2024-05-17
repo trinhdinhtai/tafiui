@@ -1,8 +1,8 @@
-import { ComponentProps, HTMLAttributes } from "react"
+import { HTMLAttributes } from "react"
 import * as runtime from "react/jsx-runtime"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
+import CodeBlockWrapper from "@/components/mdx/code-block-wrapper"
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code)
@@ -75,6 +75,12 @@ const components = {
   ),
   li: ({ className, ...props }: HTMLAttributes<HTMLLIElement>) => (
     <li className={cn("mt-2", className)} {...props} />
+  ),
+  figure: (props: HTMLAttributes<HTMLElement>) => (
+    <CodeBlockWrapper props={props} />
+  ),
+  pre: ({ className, ...props }: HTMLAttributes<HTMLPreElement>) => (
+    <pre className={cn("overflow-x-auto py-4", className)} {...props} />
   ),
 }
 
