@@ -39,5 +39,10 @@ export const siteConfig = {
       path: "/components/marquee",
       new: false,
     },
+    {
+      title: "Shine",
+      path: "/components/shine",
+      new: false,
+    },
   ],
 }
