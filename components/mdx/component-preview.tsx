@@ -39,7 +39,7 @@ export default function ComponentPreview({
   return (
     <div
       className={cn(
-        "relative mb-4 mt-6 flex h-[550px] w-full items-center justify-center overflow-hidden rounded-[1rem] border bg-background p-4",
+        "relative mb-4 mt-6 flex h-[450px] w-full items-center justify-center overflow-hidden rounded-[1rem] border bg-background p-4",
         className
       )}
       {...props}
@@ -47,6 +47,8 @@ export default function ComponentPreview({
       <Suspense fallback={<div></div>}>
         <LazyComponent key={key} />
       </Suspense>
+
+      <div className="lab-bg absolute inset-0 h-full w-full bg-[radial-gradient(#00000055_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff22_1px,transparent_1px)]" />
 
       <Button
         size="icon"

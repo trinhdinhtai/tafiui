@@ -65,7 +65,7 @@ export default function GlitchBanner() {
   }, [currentText, glitchActive, words, currentWordIndex])
 
   return (
-    <section className="flex h-[400px] w-full justify-center p-4">
+    <section className="z-10 flex h-[400px] w-full justify-center p-4">
       <h1 className="flex h-full w-full flex-col justify-center text-5xl font-black tracking-tighter max-lg:text-center sm:text-6xl md:text-7xl">
         BUILDING
         <span style={{ color: currentText.color }}>
