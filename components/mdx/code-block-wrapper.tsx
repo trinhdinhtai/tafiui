@@ -62,7 +62,7 @@ export default function CodeBlockWrapper({
               className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2"
               onClick={handleToggleExpanding}
             >
-              {open ? "Hide" : "Show More"}
+              {open ? "Collapse" : "Expand"}
             </Button>
           </>
         )}
