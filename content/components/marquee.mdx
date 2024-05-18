@@ -1,0 +1,41 @@
+---
+title: Marquee
+description: An infinite scrolling component that can be used to display text, images, or videos.
+date: 2024-05-05
+published: true
+---
+
+# Marquee
+
+An infinite scrolling component that can be used to display text, images, or videos.
+
+## Preview
+
+<ComponentPreview name="marquee-demo" className="h-[550px]" />
+
+## Configuration
+
+Add the animation to your `tailwind.config.ts` file.
+
+```ts {4-11} {14-15}
+  theme: {
+    extend: {
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
+      animation: {
+         marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+    },
+  }
+```
+
+**_Note:_** This is not the entire configuration file, only the relevant parts are shown. Make sure to include the new configuration inside the **_theme_** object.

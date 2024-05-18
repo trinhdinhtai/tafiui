@@ -1,3 +1,5 @@
+import { title } from "process"
+
 export const siteConfig = {
   name: "TafiUI",
   links: {
@@ -30,6 +32,11 @@ export const siteConfig = {
     {
       title: "Number Ticker",
       path: "/components/number-ticker",
+      new: false,
+    },
+    {
+      title: "Marquee",
+      path: "/components/marquee",
       new: false,
     },
   ],
