@@ -3,7 +3,10 @@ import { Roboto_Mono as FontMono, Inter as FontSans } from "next/font/google"
 
 import "@/styles/globals.css"
 
+import { CommandMenuProvider } from "@/context/command-menu-provider"
+
 import { cn } from "@/lib/utils"
+import { CommandMenu } from "@/components/command-menu"
 import Footer from "@/components/layout/footer"
 import Header from "@/components/layout/header"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -43,13 +46,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-dvh flex-col bg-background">
-            <Header />
-            <main className="flex flex-1 items-center justify-center">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <CommandMenuProvider>
+            <div className="relative flex min-h-dvh flex-col bg-background">
+              <Header />
+              <main className="flex flex-1 items-center justify-center">
+                {children}
+              </main>
+              <Footer />
+              <CommandMenu />
+            </div>
+          </CommandMenuProvider>
         </ThemeProvider>
       </body>
     </html>
