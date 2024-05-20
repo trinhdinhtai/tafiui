@@ -29,7 +29,7 @@ export default function ShineExample() {
 
           <div className="flex items-center justify-center">
             <a
-              href="https://github.com/gonzalochale/chonza"
+              href="https://github.com/trinhdinhtai/tafiui"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

@@ -6,10 +6,39 @@ date: 2021-05-11
 
 ## Using NextJS
 
-Create a new NextJS project using the following command
+<Steps>
 
-### Initial configuration
+<Step>Create a new NextJS project using the following command</Step>
 
-After running the command, you will be prompted with a series of questions, this is where you can configure your project to use TafiUI with NextJS and Tailwind CSS.
+```bash
+npx create-next-app@latest
+```
 
-That's it! You have successfully created a new project with NextJS and Tailwind CSS, so you can start building your project with TafiUI only importing the components you need.
+<Step>On installation, you'll see the following prompts</Step>
+
+```bash /Yes/ /No/ /your-project-name/
+What is your project named? your-project-name
+Would you like to use TypeScript? Yes
+Would you like to use ESLint? Yes
+Would you like to use Tailwind CSS? Yes
+Would you like to use `src/` directory? No
+Would you like to use App Router? Yes
+Would you like to customize the default import alias (@/*)? No
+```
+
+<Step>Start your app</Step>
+
+```bash
+cd my-app
+npm run dev
+```
+
+<Step>Start using Tailwindcss</Step>
+
+```tsx {2}
+export default function Home() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>
+}
+```
+
+</Steps>

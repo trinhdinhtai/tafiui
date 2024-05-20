@@ -6,3 +6,16 @@ published: true
 ---
 
 <ComponentPreview name="shine-demo" />
+
+```tsx {1, 6-8} showLineNumbers
+import HeroSection from "@/components/marketing/hero-section"
+import Shine from "@/components/Shine"
+
+export default function Home() {
+  return (
+    <Shine>
+      <HeroSection />
+    </Shine>
+  )
+}
+```
