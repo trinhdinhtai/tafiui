@@ -6,15 +6,13 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-interface HeroSectionProps extends HTMLAttributes<HTMLDivElement> {}
-
-export default function HeroSection({ className, ...props }: HeroSectionProps) {
+export default function HeroSection() {
   const newComponent =
     siteConfig.components.find((component) => component.new) ||
     siteConfig.components[0]
 
   return (
-    <section className={className}>
+    <section>
       <div className="flex flex-col justify-center space-y-4 text-center">
         <div className="space-y-2">
           <span className="bg-gradient-to-b from-black to-black/40 bg-clip-text text-4xl font-bold tracking-tighter text-transparent dark:from-white dark:to-white/40 sm:text-5xl md:text-6xl lg:text-7xl/none">

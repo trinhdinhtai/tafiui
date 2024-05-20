@@ -30,6 +30,11 @@ export function rehypeComponent() {
 
         try {
           const component = Index[name]
+
+          if (!component) {
+            return null
+          }
+
           const src = component.files[0]
 
           // Read the source file.
