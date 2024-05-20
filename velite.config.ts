@@ -3,6 +3,8 @@ import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import { defineCollection, defineConfig, s } from "velite"
 
+import { rehypeComponent } from "@/lib/rehype-component"
+
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
   slugAsParams: data.slug.split("/").slice(1).join("/"),
@@ -51,6 +53,7 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug as any,
+      rehypeComponent,
       [
         rehypePrettyCode,
         {

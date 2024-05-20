@@ -8,8 +8,8 @@ export const registrySchema = z.array(
     registryDependencies: z.array(z.string()).optional(),
     files: z.array(z.string()),
     type: z.enum([
-      "components:extension",
-      "components:demo",
+      "components:ui",
+      "components:component",
       "components:example",
     ]),
   })
