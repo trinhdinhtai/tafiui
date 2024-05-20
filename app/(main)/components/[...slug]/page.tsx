@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import { components as allComponents } from "#site/content"
 
 import { MDXContent } from "@/components/mdx"
+import { MdxPageHeader } from "@/components/mdx/mdx-page-header"
 
 interface ComponentsProps {
   params: {
@@ -26,5 +27,10 @@ export default async function ComponentsPage({ params }: ComponentsProps) {
 
   if (!doc?.published) return notFound()
 
-  return <MDXContent code={doc.body} />
+  return (
+    <>
+      <MdxPageHeader heading={doc.title} text={doc.description} />
+      <MDXContent code={doc.body} />
+    </>
+  )
 }

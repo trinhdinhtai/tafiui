@@ -1,6 +1,7 @@
 import { docs as allDocs } from "#site/content"
 
 import { MDXContent } from "@/components/mdx"
+import { MdxPageHeader } from "@/components/mdx/mdx-page-header"
 
 export default function DocsPage() {
   const introduction = allDocs.find(
@@ -9,5 +10,13 @@ export default function DocsPage() {
 
   if (!introduction?.published) return null
 
-  return <MDXContent code={introduction.body} />
+  return (
+    <>
+      <MdxPageHeader
+        heading={introduction.title}
+        text={introduction.description}
+      />
+      <MDXContent code={introduction.body} />
+    </>
+  )
 }
