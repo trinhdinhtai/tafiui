@@ -11,4 +11,25 @@ export const Index: Record<string, any> = {
     component: React.lazy(() => import("@/registry/example/glitch-demo")),
     files: ["/registry/example/glitch-demo.tsx"],
   },
+  "number-ticker-demo": {
+    name: "number-ticker-demo",
+    type: "components:example",
+    registryDependencies: ["framer-motion"],
+    component: React.lazy(() => import("@/registry/example/number-ticker-demo")),
+    files: ["/registry/example/number-ticker-demo.tsx"],
+  },
+  "marquee-demo": {
+    name: "marquee-demo",
+    type: "components:example",
+    registryDependencies: ["framer-motion"],
+    component: React.lazy(() => import("@/registry/example/marquee-demo")),
+    files: ["/registry/example/marquee-demo.tsx"],
+  },
+  "shine-demo": {
+    name: "shine-demo",
+    type: "components:example",
+    registryDependencies: ["framer-motion"],
+    component: React.lazy(() => import("@/registry/example/shine-demo")),
+    files: ["/registry/example/shine-demo.tsx"],
+  },
 }

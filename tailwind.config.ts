@@ -9,6 +9,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./content/**/*.{md,mdx}",
+    "./registry/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {

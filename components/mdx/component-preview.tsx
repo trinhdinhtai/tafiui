@@ -116,7 +116,9 @@ export default function ComponentPreview({
 
         <TabsContent value="code">
           <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_figure]:my-0">{Code}</div>
+            <div className="w-full rounded-md font-normal [&_figure]:my-0">
+              {Code}
+            </div>
           </div>
         </TabsContent>
       </Tabs>

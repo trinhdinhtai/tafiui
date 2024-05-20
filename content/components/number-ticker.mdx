@@ -5,60 +5,24 @@ date: 2024-04-17
 published: true
 ---
 
-<ComponentPreview name="number-ticker" className="text-[100px] font-bold" />
+<ComponentPreview
+  name="number-ticker-demo"
+  className="text-[100px] font-bold"
+/>
 
-```tsx
-"use client"
+## Installation
 
-import { useEffect, useRef } from "react"
-import { useInView, useMotionValue, useSpring } from "framer-motion"
+<Steps>
 
-export default function NumberTicker({
-  value = 100,
-  direction = "up",
-  delay = 0,
-  className,
-}: {
-  value?: number
-  direction?: "up" | "down"
-  className?: string
-  delay?: number // delay in s
-}) {
-  const ref = useRef<HTMLSpanElement>(null)
-  const motionValue = useMotionValue(direction === "down" ? value : 0)
-  const springValue = useSpring(motionValue, {
-    damping: 60,
-    stiffness: 100,
-  })
-  const isInView = useInView(ref, { once: true, margin: "0px" })
+<Step>Run the following command:</Step>
 
-  useEffect(() => {
-    isInView &&
-      setTimeout(() => {
-        motionValue.set(direction === "down" ? 0 : value)
-      }, delay * 1000)
-  }, [motionValue, isInView, delay, value, direction])
-
-  useEffect(
-    () =>
-      springValue.on("change", (latest) => {
-        if (ref.current) {
-          ref.current.textContent = Intl.NumberFormat("en-US").format(
-            latest.toFixed(0)
-          )
-        }
-      }),
-    [springValue]
-  )
-
-  return (
-    <span
-      className={`inline-block tabular-nums text-black dark:text-white ${className}`}
-      ref={ref}
-    />
-  )
-}
+```bash
+npm i framer-motion
 ```
+
+<Step>Copy the source code into new file `number-ticker.ts`</Step>
+
+</Steps>
 
 ## Usage
 
