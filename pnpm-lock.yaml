@@ -20,9 +20,12 @@ importers:
 
   apps/web:
     dependencies:
-      '@repo/ui':
+      '@tafi/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@tafi/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.31)
@@ -57,18 +60,15 @@ importers:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.2.1
         version: 4.2.1(prettier@3.2.5)
-      '@repo/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-      '@repo/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
-      '@tafiui/eslint-config':
+      '@tafi/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@tafi/tailwind-config':
+        specifier: workspace:*
+        version: link:../../packages/tailwind-config
+      '@tafi/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^20
         version: 20.11.24
@@ -145,7 +145,7 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.4(ts-node@10.9.1(typescript@5.4.5)))
     devDependencies:
-      '@repo/typescript-config':
+      '@tafi/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       tailwindcss:
@@ -160,12 +160,12 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@tafiui/eslint-config':
+      '@tafi/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@tafi/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@turbo/gen':
         specifier: ^1.12.4
         version: 1.12.4(@types/node@20.11.24)(typescript@5.3.3)
@@ -197,12 +197,12 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
     devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@tafiui/eslint-config':
+      '@tafi/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@tafi/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@types/node':
         specifier: ^20.11.24
         version: 20.11.24

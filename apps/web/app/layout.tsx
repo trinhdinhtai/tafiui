@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 import "./globals.css"
 
-import { cn } from "@repo/utils"
+import { cn } from "@tafi/utils"
 
 import { fontMono, fontSans } from "@/lib/fonts"
 import { ThemeProvider } from "@/components/providers/theme-provider"

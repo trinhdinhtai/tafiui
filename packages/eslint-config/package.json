@@ -1,5 +1,5 @@
 {
-  "name": "@tafiui/eslint-config",
+  "name": "@tafi/eslint-config",
   "version": "0.0.1",
   "description": "The eslint config for TafiUI",
   "files": [
