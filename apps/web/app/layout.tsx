@@ -2,8 +2,10 @@ import type { Metadata } from "next"
 
 import "./globals.css"
 
+import { cn } from "@repo/utils"
+
 import { fontMono, fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
+import { ThemeProvider } from "@/components/providers/theme-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +20,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(`${fontSans.variable} ${fontMono.variable} font-sans`)}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+          fontMono.variable
+        )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
