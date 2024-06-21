@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@repo/ui": "workspace:*",
     "@tafi/ui": "workspace:*",
     "@tafi/utils": "workspace:*",
     "autoprefixer": "^10.4.19",

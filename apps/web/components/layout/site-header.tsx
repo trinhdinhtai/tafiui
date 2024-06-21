@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { Card } from "@repo/ui/card"
+import { Button } from "@tafi/ui"
 import { MenuIcon } from "lucide-react"
 
 export default function SiteHeader() {
@@ -13,16 +15,20 @@ export default function SiteHeader() {
           <div className="flex items-center justify-between py-1">
             <Link
               href="/"
-              className="font-title relative bg-gradient-to-tr from-white/60 via-white/90 to-white/50 bg-clip-text text-2xl font-semibold text-transparent md:mr-4"
+              className="relative bg-gradient-to-tr from-white/60 via-white/90 to-white/50 bg-clip-text font-title text-2xl font-semibold text-transparent md:mr-4"
             >
               TafiUI
             </Link>
 
-            <div className="flex md:hidden">
-              <button aria-label="menu button" className="menu-btn group">
-                <MenuIcon className="pointer-events-none size-5" />
-              </button>
-            </div>
+            {/* <div className="flex md:hidden">
+              <Button variant="test" size="icon">
+                Test
+              </Button>
+            </div> */}
+
+            <Card href="/" title="sfsfsfsf">
+              Test 2
+            </Card>
           </div>
         </div>
       </nav>
