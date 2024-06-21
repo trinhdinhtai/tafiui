@@ -1,8 +1,11 @@
 {
   "extends": "@tafi/typescript-config/react-library.json",
-  "compilerOptions": {
-    "outDir": "dist"
-  },
   "include": ["src"],
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "Bundler"
+  }
 }
