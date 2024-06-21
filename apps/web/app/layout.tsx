@@ -2,9 +2,11 @@ import type { Metadata } from "next"
 
 import "./globals.css"
 
+import { Toaster } from "@tafi/ui"
 import { cn } from "@tafi/utils"
 
-import { fontMono, fontSans } from "@/lib/fonts"
+import { fontGrotesk, fontMono, fontSans } from "@/lib/fonts"
+import SiteHeader from "@/components/layout/site-header"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 
 export const metadata: Metadata = {
@@ -23,7 +25,8 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
-          fontMono.variable
+          fontMono.variable,
+          fontGrotesk.variable
         )}
       >
         <ThemeProvider
@@ -32,7 +35,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="relative flex min-h-screen flex-col bg-background">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

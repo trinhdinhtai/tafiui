@@ -1,5 +1,10 @@
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
+import { Space_Grotesk } from "next/font/google"
+import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
 
-export const fontSans = GeistSans;
-export const fontMono = GeistMono;
+export const fontSans = GeistSans
+export const fontMono = GeistMono
+export const fontGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-title",
+})

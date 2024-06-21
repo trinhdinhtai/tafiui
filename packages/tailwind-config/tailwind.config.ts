@@ -56,6 +56,7 @@ const config: Omit<Config, "content"> = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
+        title: ["var(--font-title)"],
       },
       keyframes: {
         "accordion-down": {
