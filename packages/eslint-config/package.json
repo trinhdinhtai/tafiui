@@ -1,7 +1,7 @@
 {
-  "name": "@repo/eslint-config",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@tafiui/eslint-config",
+  "version": "0.0.1",
+  "description": "The eslint config for TafiUI",
   "files": [
     "library.js",
     "next.js",
@@ -15,5 +15,8 @@
     "@typescript-eslint/parser": "^7.1.0",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
