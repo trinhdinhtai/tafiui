@@ -4,18 +4,28 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "files": [
     "dist"
   ],
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./style.css": "./dist/index.css",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "build": "pnpm build:layout && pnpm build:tailwind",
+    "dev": "pnpm dev:layout & pnpm dev:tailwind",
     "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "build:layout": "tsup",
+    "build:tailwind": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "dev:layout": "tsup --watch",
+    "dev:tailwind": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -29,6 +39,7 @@
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
+    "tsup": "^8.1.0",
     "typescript": "^5.3.3"
   }
 }
