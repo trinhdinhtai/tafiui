@@ -8,6 +8,7 @@ import { cn } from "@tafi/utils"
 import { MenuIcon, X } from "lucide-react"
 
 import { NAVBAR_LINKS } from "@/config/nav"
+import Logo from "@/components/logo"
 
 export default function SiteHeader() {
   const pathname = usePathname()
@@ -20,12 +21,7 @@ export default function SiteHeader() {
       }
     >
       <div className="flex items-center justify-between py-1">
-        <Link
-          href="/"
-          className="font-title relative bg-gradient-to-tr from-white/60 via-white/90 to-white/50 bg-clip-text text-2xl font-semibold text-transparent md:mr-4"
-        >
-          TafiUI
-        </Link>
+        <Logo />
 
         {/* Desktop nav */}
         <ul className="hidden items-center justify-center space-x-6 md:flex">
