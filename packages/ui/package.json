@@ -1,35 +1,19 @@
 {
   "name": "@tafi/ui",
   "version": "0.0.0",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "type": "module",
+  "sideEffects": false,
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**"
   ],
-  "exports": {
-    "./style.css": "./dist/index.css",
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
   "license": "MIT",
   "scripts": {
-    "build": "pnpm build:layout && pnpm build:tailwind",
-    "dev": "pnpm dev:layout & pnpm dev:tailwind",
+    "build": "tsup",
     "lint": "eslint src/",
-    "build:layout": "tsup",
-    "build:tailwind": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
-    "dev:layout": "tsup --watch",
-    "dev:tailwind": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev": "tsup --watch",
     "type-check": "tsc --noEmit"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
   },
   "devDependencies": {
     "@tafi/eslint-config": "workspace:*",
@@ -37,9 +21,26 @@
     "@tafi/typescript-config": "workspace:*",
     "@types/react": "^18.2.61",
     "autoprefixer": "^10.4.18",
+    "next": "14.2.4",
     "postcss": "^8.4.35",
+    "react": "^18.2.0",
     "tailwindcss": "^3.4.1",
     "tsup": "^8.1.0",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "next": "14.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "exports": {
+    "./style.css": "./dist/index.css",
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

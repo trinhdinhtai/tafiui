@@ -88,10 +88,6 @@ importers:
   packages/typescript-config: {}
 
   packages/ui:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
     devDependencies:
       '@tafi/eslint-config':
         specifier: workspace:*
@@ -108,9 +104,15 @@ importers:
       autoprefixer:
         specifier: ^10.4.18
         version: 10.4.18(postcss@8.4.35)
+      next:
+        specifier: 14.2.4
+        version: 14.2.4(@babel/core@7.24.7)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       postcss:
         specifier: ^8.4.35
         version: 8.4.35
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
