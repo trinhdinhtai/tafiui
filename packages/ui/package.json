@@ -19,6 +19,7 @@
     "@tafi/eslint-config": "workspace:*",
     "@tafi/tailwind-config": "workspace:*",
     "@tafi/typescript-config": "workspace:*",
+    "@tafi/utils": "workspace:*",
     "@types/react": "^18.2.61",
     "autoprefixer": "^10.4.18",
     "next": "14.2.4",
@@ -42,5 +43,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0"
   }
 }
