@@ -5,10 +5,9 @@ import { fontGrotesk, fontMono, fontSans } from "@/lib/fonts"
 import "./globals.css"
 import "@tafi/ui/style.css"
 
+import { ThemeProvider } from "@tafi/ui"
 import { cn } from "@tafi/utils"
 
-import SiteHeader from "@/components/layout/site-header"
-import { ThemeProvider } from "@/components/providers/theme-provider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
