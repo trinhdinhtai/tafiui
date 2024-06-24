@@ -46,6 +46,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
-    "class-variance-authority": "^0.7.0"
+    "class-variance-authority": "^0.7.0",
+    "lucide-react": "^0.396.0",
+    "next-themes": "^0.3.0"
   }
 }

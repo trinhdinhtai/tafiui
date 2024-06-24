@@ -111,6 +111,12 @@ importers:
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
+      lucide-react:
+        specifier: ^0.396.0
+        version: 0.396.0(react@18.2.0)
+      next-themes:
+        specifier: ^0.3.0
+        version: 0.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)

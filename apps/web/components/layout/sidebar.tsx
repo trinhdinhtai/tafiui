@@ -1,3 +1,5 @@
+import { ThemeToggle } from "@tafi/ui"
+
 import Logo from "@/components/logo"
 
 export default function Sidebar() {
@@ -7,6 +9,11 @@ export default function Sidebar() {
         <div className="flex items-center justify-between border-b pb-2 max-md:hidden">
           <Logo />
         </div>
+      </div>
+
+      <div className="flex-1"></div>
+      <div className="flex items-center border-t px-4 pb-2 pt-1 md:px-3">
+        <ThemeToggle />
       </div>
     </aside>
   )
