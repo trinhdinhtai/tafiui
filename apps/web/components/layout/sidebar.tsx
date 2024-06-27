@@ -38,7 +38,7 @@ export default function Sidebar() {
                       className={cn(
                         "text-muted-foreground flex w-full items-center gap-2 rounded-md px-2 py-1.5 transition-colors duration-100 [&_svg]:size-4",
                         isActive(link.href) &&
-                          "dark:text-violet-40 bg-zinc-100 font-medium text-violet-500 dark:bg-zinc-800"
+                          "bg-accent/10 text-accent font-medium"
                       )}
                       href={link.href}
                     >

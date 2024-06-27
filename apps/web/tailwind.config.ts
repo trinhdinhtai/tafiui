@@ -1,5 +1,3 @@
-// tailwind config is required for editor support
-
 import sharedConfig from "@tafi/tailwind-config"
 import type { Config } from "tailwindcss"
 
