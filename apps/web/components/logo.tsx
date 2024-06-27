@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="font-title relative bg-gradient-to-tr from-white/60 via-white/90 to-white/50 bg-clip-text text-2xl font-semibold text-transparent md:mr-4"
+      className="font-title from-primary/60 via-primary/90 to-primary/50 relative bg-gradient-to-tr bg-clip-text text-2xl font-semibold text-transparent md:mr-4"
     >
       TafiUI
     </Link>
