@@ -14,7 +14,7 @@ export const SIDEBAR_LINKS: SidebarLink[] = [
     items: [
       {
         title: "Introduction",
-        href: "/components",
+        href: "/docs",
       },
     ],
   },
