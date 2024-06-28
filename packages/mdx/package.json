@@ -1,0 +1,31 @@
+{
+  "name": "@taifi/mdx",
+  "version": "1.0.0",
+  "description": "The built-in source for Tafi Markdown components",
+  "license": "MIT",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.mts",
+  "files": [
+    "dist/*",
+    "loader-mdx.js",
+    "loader.js"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "types:check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tafi/typescript-config": "workspace:*"
+  }
+}
