@@ -113,6 +113,16 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(eslint@8.57.0)
 
+  packages/mdx:
+    dependencies:
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+    devDependencies:
+      '@tafi/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+
   packages/tailwind-config:
     dependencies:
       tailwindcss-animate:

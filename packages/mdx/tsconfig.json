@@ -1,0 +1,9 @@
+{
+  "extends": "@tafi/typescript-config/react-library.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
