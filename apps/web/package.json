@@ -22,6 +22,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@tafi/contentlayer": "workspace:*",
     "@next/eslint-plugin-next": "^14.2.3",
     "@tafi/eslint-config": "workspace:*",
     "@tafi/tailwind-config": "workspace:*",
