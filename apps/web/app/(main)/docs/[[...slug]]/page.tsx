@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation"
 import { allDocs } from "@/.contentlayer/generated"
 
+import { MDXContent } from "@/components/mdx"
+import { MdxPageHeader } from "@/components/mdx-page-header"
+
 async function getDocFromParams(params: DocsPageProps["params"]) {
   const slug = params.slug?.join("/") || ""
 
@@ -24,5 +27,10 @@ export default async function DocPage({ params }: DocsPageProps) {
 
   if (!doc) return notFound()
 
-  return <div>page</div>
+  return (
+    <div className="md:px-46 pd:pt-12 mx-auto flex w-full max-w-[840px] flex-1 flex-col gap-6 px-4 pt-10">
+      <MdxPageHeader heading={doc.title} text={doc.description} />
+      <MDXContent code={doc.body.raw} />
+    </div>
+  )
 }
