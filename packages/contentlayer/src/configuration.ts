@@ -45,6 +45,7 @@ export function create(options: Options = {}) {
   const Doc = defineDocumentType(() => ({
     name: "Doc",
     filePathPattern: `${docsPattern}/**/*.mdx`,
+    contentType: "mdx",
     fields: {
       title: {
         type: "string",
