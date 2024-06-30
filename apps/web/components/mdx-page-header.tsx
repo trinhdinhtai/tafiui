@@ -17,7 +17,8 @@ export function MdxPageHeader({
       <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
         {heading}
       </h1>
-      {text && <p className="text-muted-foreground">{text}</p>}
+
+      {text && <p className="text-muted-foreground mb-8 text-lg">{text}</p>}
     </div>
   )
 }
