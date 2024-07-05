@@ -39,6 +39,10 @@
     ".": {
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
+    },
+    "./mdx": {
+      "import": "./dist/mdx.mjs",
+      "types": "./dist/mdx.d.mts"
     }
   },
   "publishConfig": {

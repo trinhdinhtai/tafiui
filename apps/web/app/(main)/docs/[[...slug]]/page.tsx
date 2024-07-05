@@ -30,7 +30,10 @@ export default async function DocPage({ params }: DocsPageProps) {
   return (
     <div className="md:px-46 pd:pt-12 mx-auto flex w-full max-w-[840px] flex-1 flex-col gap-6 px-4 pt-10">
       <MdxPageHeader heading={doc.title} text={doc.description} />
-      <MDXContent code={doc.body.code} />
+
+      <div className="prose">
+        <MDXContent code={doc.body.code} />
+      </div>
     </div>
   )
 }
