@@ -49,6 +49,30 @@ const config: Omit<Config, "content"> = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            "--tw-prose-body": `theme('colors.foreground / 90%')`,
+            "--tw-prose-headings": "theme('colors.foreground')",
+            "--tw-prose-code": "theme('colors.foreground')",
+            "--tw-prose-bold": `theme('colors.foreground')`,
+            code: {
+              padding: "3px",
+              fontSize: "13px",
+              borderRadius: "6px",
+              background: "theme('colors.secondary.DEFAULT / 50%')",
+              border: "1px solid hsl(var(--border))",
+            },
+
+            // Disabled styles
+            "pre code": false,
+            "pre code::after": false,
+            "pre code::before": false,
+            "code::after": false,
+            "code::before": false,
+          },
+        },
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
