@@ -16,6 +16,19 @@ export const SIDEBAR_LINKS: SidebarLink[] = [
         title: "Introduction",
         href: "/docs",
       },
+      {
+        title: "Installation",
+        href: "/docs/installation",
+      },
+    ],
+  },
+  {
+    category: "Components",
+    items: [
+      {
+        title: "Accordion",
+        href: "/docs/components/accordion",
+      },
     ],
   },
 ]

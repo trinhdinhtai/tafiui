@@ -55,7 +55,8 @@ const config: Omit<Config, "content"> = {
             "--tw-prose-body": `theme('colors.foreground / 90%')`,
             "--tw-prose-headings": "theme('colors.foreground')",
             "--tw-prose-code": "theme('colors.foreground')",
-            "--tw-prose-bold": `theme('colors.foreground')`,
+            "--tw-prose-bold": "theme('colors.foreground')",
+            "--tw-prose-links": "theme('colors.foreground')",
             code: {
               padding: "3px",
               fontSize: "13px",
